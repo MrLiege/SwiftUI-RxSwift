@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="MeasurementEntity" representedClassName="MeasurementEntity" syncable="YES">
+        <attribute name="diastolicPressure" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="measurementDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="measurementTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="pulse" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="systolicPressure" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="measurement" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MeasurementEntity" inverseName="measurement" inverseEntity="MeasurementEntity"/>
+        <fetchedProperty name="fetchedProperty" optional="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="MeasurementEntity"/>
+        </fetchedProperty>
+    </entity>
+</model>
