@@ -12,11 +12,10 @@ import CoreData
 
 final class MainViewModel: ObservableObject {
     let input: Input
+    let coordinator: Coordinator = .shared
+    
     private var disposeBag = DisposeBag()
     
-    // MARK: Output for Binding<Bool>
-    @Published var isAddingDataViewPresented: Bool = false
-
     init() {
         self.input = Input()
         bind()
@@ -24,8 +23,8 @@ final class MainViewModel: ObservableObject {
 
     func bind() {
         input.settingButtonTap
-            .subscribe(onNext: { [weak self] in
-                self?.isAddingDataViewPresented = true
+            .subscribe(onNext: {
+                self.coordinator.isAddingDataViewPresented = true
             })
             .disposed(by: disposeBag)
     }

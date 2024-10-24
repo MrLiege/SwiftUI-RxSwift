@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct AddingDataView: View {
+    @StateObject var viewModel = AddingDataViewModel()
+    
     var body: some View {
-        TitleBackButtonView()
-        
-        Spacer()
+        VStack {
+            TitleBackButtonView()
+            
+            BodyParametersView()
+            Spacer()
+        }
+        .frame(maxWidth: .infinity)
+        .background(AddingDataBackgroundView())
     }
-}
-
-#Preview {
-    AddingDataView()
 }

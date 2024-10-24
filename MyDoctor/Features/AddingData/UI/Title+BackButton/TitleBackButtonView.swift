@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TitleBackButtonView: View {
+    @ObservedObject var coordinator: Coordinator = .shared
+    
     var body: some View {
         HStack {
             backButton()
@@ -28,7 +30,7 @@ private extension TitleBackButtonView {
     @ViewBuilder
     func backButton() -> some View {
         Button {
-            print("")
+            coordinator.isAddingDataViewPresented = false
         } label: {
             Image(systemName: "chevron.backward")
         }

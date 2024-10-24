@@ -34,6 +34,12 @@
 		0CA5A55D2CC8F36500A484DB /* AddingDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A55C2CC8F36500A484DB /* AddingDataView.swift */; };
 		0CA5A5702CC97B2400A484DB /* TitleBackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A56F2CC97B2400A484DB /* TitleBackButtonView.swift */; };
 		0CA5A5732CC97D2900A484DB /* BodyParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A5722CC97D2900A484DB /* BodyParametersView.swift */; };
+		0CA5A5752CCA5EB400A484DB /* AddingDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A5742CCA5EB400A484DB /* AddingDataViewModel.swift */; };
+		0CA5A5782CCA6E7B00A484DB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A5772CCA6E7B00A484DB /* Coordinator.swift */; };
+		0CA5A57B2CCA8E1000A484DB /* AddingTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A57A2CCA8E1000A484DB /* AddingTextFieldModifier.swift */; };
+		0CA5A57D2CCAD03B00A484DB /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A57C2CCAD03B00A484DB /* Color+Extension.swift */; };
+		0CA5A5802CCAD34C00A484DB /* MainBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A57F2CCAD34C00A484DB /* MainBackgroundView.swift */; };
+		0CA5A5862CCAE11900A484DB /* AddingDataBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A5852CCAE11900A484DB /* AddingDataBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +81,12 @@
 		0CA5A55C2CC8F36500A484DB /* AddingDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingDataView.swift; sourceTree = "<group>"; };
 		0CA5A56F2CC97B2400A484DB /* TitleBackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBackButtonView.swift; sourceTree = "<group>"; };
 		0CA5A5722CC97D2900A484DB /* BodyParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersView.swift; sourceTree = "<group>"; };
+		0CA5A5742CCA5EB400A484DB /* AddingDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingDataViewModel.swift; sourceTree = "<group>"; };
+		0CA5A5772CCA6E7B00A484DB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0CA5A57A2CCA8E1000A484DB /* AddingTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingTextFieldModifier.swift; sourceTree = "<group>"; };
+		0CA5A57C2CCAD03B00A484DB /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		0CA5A57F2CCAD34C00A484DB /* MainBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundView.swift; sourceTree = "<group>"; };
+		0CA5A5852CCAE11900A484DB /* AddingDataBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingDataBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +127,7 @@
 				0CA5A5112CC6A58700A484DB /* Recources */,
 				0CA5A5522CC8E07300A484DB /* Services */,
 				0CA5A5492CC826F800A484DB /* Model */,
+				0CA5A5762CCA6E6500A484DB /* Coordinators */,
 				0CA5A5122CC6A5A000A484DB /* Features */,
 				0CA5A5152CC6A95400A484DB /* Helpers */,
 				0CA5A4D12CC6952B00A484DB /* Preview Content */,
@@ -202,6 +215,7 @@
 		0CA5A5202CC6B0E700A484DB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0CA5A57E2CCAD33800A484DB /* Background */,
 				0CA5A5402CC7F26000A484DB /* PopUpView */,
 				0CA5A53D2CC7E90800A484DB /* NoteView */,
 				0CA5A5322CC6F4CA00A484DB /* СhartView */,
@@ -222,6 +236,7 @@
 		0CA5A5242CC6B33E00A484DB /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				0CA5A5792CCA8DDC00A484DB /* TextFieldsModifier */,
 				0CA5A52C2CC6EC8200A484DB /* Segment */,
 				0CA5A5352CC6F95000A484DB /* BackgroundModifier */,
 				0CA5A51D2CC6AC2E00A484DB /* TextModifier */,
@@ -290,6 +305,7 @@
 		0CA5A5392CC7007A00A484DB /* Colors+Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0CA5A57C2CCAD03B00A484DB /* Color+Extension.swift */,
 			);
 			path = "Colors+Extension";
 			sourceTree = "<group>";
@@ -349,6 +365,7 @@
 			children = (
 				0CA5A56D2CC97AC600A484DB /* UI */,
 				0CA5A55C2CC8F36500A484DB /* AddingDataView.swift */,
+				0CA5A5742CCA5EB400A484DB /* AddingDataViewModel.swift */,
 			);
 			path = AddingData;
 			sourceTree = "<group>";
@@ -356,6 +373,7 @@
 		0CA5A56D2CC97AC600A484DB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0CA5A5842CCAE0EA00A484DB /* Background */,
 				0CA5A5712CC97CA800A484DB /* BodyParametersView */,
 				0CA5A56E2CC97AD200A484DB /* Title+BackButton */,
 			);
@@ -376,6 +394,38 @@
 				0CA5A5722CC97D2900A484DB /* BodyParametersView.swift */,
 			);
 			path = BodyParametersView;
+			sourceTree = "<group>";
+		};
+		0CA5A5762CCA6E6500A484DB /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				0CA5A5772CCA6E7B00A484DB /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		0CA5A5792CCA8DDC00A484DB /* TextFieldsModifier */ = {
+			isa = PBXGroup;
+			children = (
+				0CA5A57A2CCA8E1000A484DB /* AddingTextFieldModifier.swift */,
+			);
+			path = TextFieldsModifier;
+			sourceTree = "<group>";
+		};
+		0CA5A57E2CCAD33800A484DB /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				0CA5A57F2CCAD34C00A484DB /* MainBackgroundView.swift */,
+			);
+			path = Background;
+			sourceTree = "<group>";
+		};
+		0CA5A5842CCAE0EA00A484DB /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				0CA5A5852CCAE11900A484DB /* AddingDataBackgroundView.swift */,
+			);
+			path = Background;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA5A5802CCAD34C00A484DB /* MainBackgroundView.swift in Sources */,
 				0CA5A55D2CC8F36500A484DB /* AddingDataView.swift in Sources */,
 				0CA5A5282CC6B38E00A484DB /* DateFormatter.swift in Sources */,
 				0CA5A5732CC97D2900A484DB /* BodyParametersView.swift in Sources */,
@@ -465,6 +516,7 @@
 				0CA5A4CE2CC6952A00A484DB /* MainView.swift in Sources */,
 				0CA5A5232CC6B18000A484DB /* DataButtonView.swift in Sources */,
 				0CA5A5702CC97B2400A484DB /* TitleBackButtonView.swift in Sources */,
+				0CA5A5782CCA6E7B00A484DB /* Coordinator.swift in Sources */,
 				0CA5A5562CC8E1B000A484DB /* CoreData.swift in Sources */,
 				0CA5A5172CC6A96200A484DB /* NavigationTitleModifier.swift in Sources */,
 				0CA5A52B2CC6E4DA00A484DB /* CustomButtonStyle.swift in Sources */,
@@ -474,11 +526,15 @@
 				0CA5A52E2CC6ECFC00A484DB /* SegmentTextModifier.swift in Sources */,
 				0CA5A5422CC7F4C700A484DB /* PopUpView.swift in Sources */,
 				0CA5A4D82CC6952B00A484DB /* MyDoctor.xcdatamodeld in Sources */,
+				0CA5A5862CCAE11900A484DB /* AddingDataBackgroundView.swift in Sources */,
+				0CA5A5752CCA5EB400A484DB /* AddingDataViewModel.swift in Sources */,
 				0CA5A4CC2CC6952A00A484DB /* MyDoctorApp.swift in Sources */,
 				0CA5A53F2CC7E92400A484DB /* NoteView.swift in Sources */,
+				0CA5A57B2CCA8E1000A484DB /* AddingTextFieldModifier.swift in Sources */,
 				0CA5A5372CC6FB5800A484DB /* BackgroundModifier.swift in Sources */,
 				0CA5A53B2CC7AF8B00A484DB /* DiagramView.swift in Sources */,
 				0CA5A5342CC6F5CE00A484DB /* ChartView.swift in Sources */,
+				0CA5A57D2CCAD03B00A484DB /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

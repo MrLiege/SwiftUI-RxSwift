@@ -9,13 +9,14 @@ import SwiftUI
 
 struct BodyParametersView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        bloodPressureTexts()
+            .padding()
     }
 }
 
 private extension BodyParametersView {
     @ViewBuilder
-    func BloodPressureTexts() -> some View {
+    func bloodPressureTexts() -> some View {
         VStack {
             Text("Кровяное давление")
                 .bigStyleText()
@@ -29,10 +30,9 @@ private extension BodyParametersView {
             }
             
             HStack {
-                Text("120")
-                    .medium14StyleText(color: Color(.systemGray2))
-                    
-                
+                TextField("120", text: .constant(""))
+                    .addingTextFieldModifier()
+
                 
             }
         }
