@@ -236,6 +236,7 @@
 		0CA5A5242CC6B33E00A484DB /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				0CA5A6142CD253F200A484DB /* DatePickerModifier */,
 				0CA5A5792CCA8DDC00A484DB /* TextFieldsModifier */,
 				0CA5A52C2CC6EC8200A484DB /* Segment */,
 				0CA5A5352CC6F95000A484DB /* BackgroundModifier */,
@@ -426,6 +427,13 @@
 				0CA5A5852CCAE11900A484DB /* AddingDataBackgroundView.swift */,
 			);
 			path = Background;
+			sourceTree = "<group>";
+		};
+		0CA5A6142CD253F200A484DB /* DatePickerModifier */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DatePickerModifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -14,7 +14,7 @@ struct AddingDataView: View {
         VStack {
             TitleBackButtonView()
             
-            BodyParametersView()
+            BodyParametersView(viewModel: viewModel)
             Spacer()
         }
         .frame(maxWidth: .infinity)

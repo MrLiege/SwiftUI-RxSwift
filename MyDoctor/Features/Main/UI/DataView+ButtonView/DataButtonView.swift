@@ -17,7 +17,7 @@ struct DataButtonView: View {
             VStack(alignment: .leading) {
                 Text("Давление")
                     .bigStyleText()
-                Text(formattedDate(date))
+                Text(mYFormattedDate(date))
                     .medium14StyleText(weight: .regular)
             }
             .padding(.leading, 32)

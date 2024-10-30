@@ -7,9 +7,15 @@
 
 import Foundation
 
-func formattedDate(_ date: Date) -> String {
+func mYFormattedDate(_ date: Date) -> String {
     let formatter = DateFormatter()
     formatter.dateFormat = "MMMM yyyy 'г.'"
     formatter.locale = Locale(identifier: "ru_RU")
+    return formatter.string(from: date)
+}
+
+func fullFormatedDate(_ date: Date) -> String {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "dd.MM.yyyy"
     return formatter.string(from: date)
 }
