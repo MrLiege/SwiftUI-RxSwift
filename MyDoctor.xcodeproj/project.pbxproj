@@ -35,7 +35,6 @@
 		0CA5A5702CC97B2400A484DB /* TitleBackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A56F2CC97B2400A484DB /* TitleBackButtonView.swift */; };
 		0CA5A5732CC97D2900A484DB /* BodyParametersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A5722CC97D2900A484DB /* BodyParametersView.swift */; };
 		0CA5A5752CCA5EB400A484DB /* AddingDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A5742CCA5EB400A484DB /* AddingDataViewModel.swift */; };
-		0CA5A5782CCA6E7B00A484DB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A5772CCA6E7B00A484DB /* Coordinator.swift */; };
 		0CA5A57B2CCA8E1000A484DB /* AddingTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A57A2CCA8E1000A484DB /* AddingTextFieldModifier.swift */; };
 		0CA5A57D2CCAD03B00A484DB /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A57C2CCAD03B00A484DB /* Color+Extension.swift */; };
 		0CA5A5802CCAD34C00A484DB /* MainBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A57F2CCAD34C00A484DB /* MainBackgroundView.swift */; };
@@ -82,7 +81,6 @@
 		0CA5A56F2CC97B2400A484DB /* TitleBackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleBackButtonView.swift; sourceTree = "<group>"; };
 		0CA5A5722CC97D2900A484DB /* BodyParametersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyParametersView.swift; sourceTree = "<group>"; };
 		0CA5A5742CCA5EB400A484DB /* AddingDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingDataViewModel.swift; sourceTree = "<group>"; };
-		0CA5A5772CCA6E7B00A484DB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0CA5A57A2CCA8E1000A484DB /* AddingTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingTextFieldModifier.swift; sourceTree = "<group>"; };
 		0CA5A57C2CCAD03B00A484DB /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		0CA5A57F2CCAD34C00A484DB /* MainBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBackgroundView.swift; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 				0CA5A5112CC6A58700A484DB /* Recources */,
 				0CA5A5522CC8E07300A484DB /* Services */,
 				0CA5A5492CC826F800A484DB /* Model */,
-				0CA5A5762CCA6E6500A484DB /* Coordinators */,
 				0CA5A5122CC6A5A000A484DB /* Features */,
 				0CA5A5152CC6A95400A484DB /* Helpers */,
 				0CA5A4D12CC6952B00A484DB /* Preview Content */,
@@ -397,14 +394,6 @@
 			path = BodyParametersView;
 			sourceTree = "<group>";
 		};
-		0CA5A5762CCA6E6500A484DB /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				0CA5A5772CCA6E7B00A484DB /* Coordinator.swift */,
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
 		0CA5A5792CCA8DDC00A484DB /* TextFieldsModifier */ = {
 			isa = PBXGroup;
 			children = (
@@ -524,7 +513,6 @@
 				0CA5A4CE2CC6952A00A484DB /* MainView.swift in Sources */,
 				0CA5A5232CC6B18000A484DB /* DataButtonView.swift in Sources */,
 				0CA5A5702CC97B2400A484DB /* TitleBackButtonView.swift in Sources */,
-				0CA5A5782CCA6E7B00A484DB /* Coordinator.swift in Sources */,
 				0CA5A5562CC8E1B000A484DB /* CoreData.swift in Sources */,
 				0CA5A5172CC6A96200A484DB /* NavigationTitleModifier.swift in Sources */,
 				0CA5A52B2CC6E4DA00A484DB /* CustomButtonStyle.swift in Sources */,

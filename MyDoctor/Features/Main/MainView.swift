@@ -10,32 +10,27 @@ import CoreData
 import RxSwift
 
 struct MainView: View {
+    @State private var viewModel: MainViewModel = MainViewModel()
+    @State private var navPath = NavigationPath()
     @State private var selectedSegment: Period = .day
-    @StateObject private var viewModel = MainViewModel()
     @StateObject private var coreDataViewModel = CoreDataViewModel.shared
-    @ObservedObject private var coordinator = Coordinator.shared
     
     var body: some View {
-        if coordinator.isAddingDataViewPresented {
-            AddingDataView(viewModel: AddingDataViewModel())
-        } else {
-            NavigationStack {
-                VStack(spacing: 16) {
-                    DataButtonView(viewModel: viewModel, date: Date())
-                    SegmentedControlView(selectedSegment: $selectedSegment)
-                    let data = getData(for: selectedSegment)
-                    ChartView(systolicData: data.systolicData, diastolicData: data.diastolicData, timePoints: data.timePoints)
-                    NoteView()
-                    Spacer()
-                }
-                .frame(maxWidth: .infinity)
-                .background(MainBackgroundView())
-                .customNavigationTitle(title: "Мой доктор", imageName: "logo")
+        NavigationStack(path: $navPath) {
+            VStack(spacing: 16) {
+                DataButtonView(navPath: $navPath, date: Date())
+                SegmentedControlView(selectedSegment: $selectedSegment)
+                let data = getData(for: selectedSegment)
+                ChartView(systolicData: data.systolicData, diastolicData: data.diastolicData, timePoints: data.timePoints)
+                NoteView()
+                Spacer()
             }
+            .frame(maxWidth: .infinity)
+            .background(MainBackgroundView())
+            .customNavigationTitle(title: "Мой доктор", imageName: "logo")
         }
     }
 }
-
 
 extension MainView {
     func getData(for period: Period) -> (systolicData: [Double], diastolicData: [Double], timePoints: [String]) {

@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct AddingDataView: View {
-    @StateObject var viewModel = AddingDataViewModel()
+    @Binding var navPath: NavigationPath
     
     var body: some View {
         VStack {
-            TitleBackButtonView()
+            TitleBackButtonView(navPath: $navPath)
             
-            BodyParametersView(viewModel: viewModel)
+            BodyParametersView()
             Spacer()
         }
         .frame(maxWidth: .infinity)
         .background(AddingDataBackgroundView())
+        .navigationBarBackButtonHidden(true)
     }
 }

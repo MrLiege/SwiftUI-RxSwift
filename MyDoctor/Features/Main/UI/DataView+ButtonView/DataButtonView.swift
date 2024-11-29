@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DataButtonView: View {
-    @ObservedObject var viewModel: MainViewModel
+    @Binding var navPath: NavigationPath
     var date: Date
 
     var body: some View {
@@ -32,10 +32,15 @@ private extension DataButtonView {
     @ViewBuilder
     func settingButton() -> some View {
         Button {
-            viewModel.input.settingButtonTap.onNext(())
+            navPath.append("AddingDataView")
         } label: {
             Image(systemName: "plus")
         }
         .settingButtonStyle()
+        .navigationDestination(for: String.self) { value in
+            if value == "AddingDataView" {
+                AddingDataView(navPath: $navPath)
+            }
+        }
     }
 }

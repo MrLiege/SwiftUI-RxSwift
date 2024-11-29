@@ -13,7 +13,6 @@ import CoreData
 final class AddingDataViewModel: ObservableObject {
     let input: Input
     let output: Output
-    let coordinator: Coordinator = .shared
     
     private var disposeBag = DisposeBag()
     
@@ -28,20 +27,13 @@ final class AddingDataViewModel: ObservableObject {
 
 extension AddingDataViewModel {
     func bind() {
-        input.backButtonTap
-            .subscribe(onNext: {
-                self.coordinator.isAddingDataViewPresented = false
-            })
-            .disposed(by: disposeBag)
     }
 }
 
 extension AddingDataViewModel {
     struct Input {
-        let backButtonTap = PublishSubject<Void>()
     }
     
     struct Output {
-        let backButtonTapped = PublishSubject<Void>()
     }
 }

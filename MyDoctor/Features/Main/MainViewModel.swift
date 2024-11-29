@@ -12,7 +12,6 @@ import CoreData
 
 final class MainViewModel: ObservableObject {
     let input: Input
-    let coordinator: Coordinator = .shared
     
     private var disposeBag = DisposeBag()
     
@@ -22,16 +21,11 @@ final class MainViewModel: ObservableObject {
     }
 
     func bind() {
-        input.settingButtonTap
-            .subscribe(onNext: {
-                self.coordinator.isAddingDataViewPresented = true
-            })
-            .disposed(by: disposeBag)
     }
 }
 
 extension MainViewModel {
     struct Input {
-        let settingButtonTap = PublishSubject<Void>()
+        
     }
 }
