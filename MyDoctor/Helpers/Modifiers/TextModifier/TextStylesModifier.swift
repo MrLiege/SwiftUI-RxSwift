@@ -9,10 +9,15 @@ import SwiftUI
 
 // MARK: -- Big Text
 struct BigStyleText: ViewModifier {
+    var weight: Font.Weight
+    var color: Color
+    
     func body(content: Content) -> some View {
         content
-            .font(.system(size: 18, weight: .semibold))
-            .foregroundColor(.black)
+//            .font(.system(size: 18, weight: .semibold))
+//            .foregroundColor(.black)
+            .font(.system(size: 18, weight: weight))
+            .foregroundColor(color)
     }
 }
 
@@ -53,8 +58,8 @@ struct SmallStyleText: ViewModifier {
 
 // MARK: -- Extension
 extension View {
-    func bigStyleText() -> some View {
-        self.modifier(BigStyleText())
+    func bigStyleText(weight: Font.Weight = .semibold, color: Color = .black) -> some View {
+        self.modifier(BigStyleText(weight: weight, color: color))
     }
     
     func medium16StyleText(weight: Font.Weight = .regular) -> some View {

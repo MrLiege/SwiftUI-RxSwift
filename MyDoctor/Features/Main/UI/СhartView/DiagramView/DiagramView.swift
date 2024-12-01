@@ -9,8 +9,8 @@ import SwiftUI
 import Charts
 
 struct DiagramView: View {
-    var systolicData: [Double] = [120.0, 140.0, 110.0]
-    var diastolicData: [Double] = [80.0, 90.0, 70.0]
+    var systolicData: [Double] = []
+    var diastolicData: [Double] = []
     var timePoints: [String] = ["0h", "6h", "12h", "18h", "24h"]
 
     var body: some View {

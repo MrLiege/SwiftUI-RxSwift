@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DataButtonView: View {
     @Binding var navPath: NavigationPath
+    
     var date: Date
 
     var body: some View {
@@ -39,7 +40,7 @@ private extension DataButtonView {
         .settingButtonStyle()
         .navigationDestination(for: String.self) { value in
             if value == "AddingDataView" {
-                AddingDataView(navPath: $navPath)
+                AddingDataView(navPath: $navPath, viewModel: AddingDataViewModel())
             }
         }
     }

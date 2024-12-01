@@ -11,21 +11,28 @@ import RxCocoa
 import CoreData
 
 final class MainViewModel: ObservableObject {
-    let input: Input
-    
-    private var disposeBag = DisposeBag()
-    
+    @Published var systolicData: [Double] = []
+    @Published var diastolicData: [Double] = []
+    @Published var timePoints: [String] = []
+
+    private var dataController = DataController.shared
+
     init() {
-        self.input = Input()
-        bind()
+        fetchData()
     }
 
-    func bind() {
+    func fetchData() {
+        let measurements = dataController.fetchItems()
+        systolicData = measurements.map { Double($0.systolicPressure) }
+        diastolicData = measurements.map { Double($0.diastolicPressure) }
+        timePoints = measurements.map { DateFormatter.timeFormatter.string(from: $0.measurementTime ?? Date()) }
     }
 }
 
-extension MainViewModel {
-    struct Input {
-        
-    }
+private extension DateFormatter {
+    static let timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        return formatter
+    }()
 }

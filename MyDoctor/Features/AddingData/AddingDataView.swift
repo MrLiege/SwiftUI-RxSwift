@@ -9,12 +9,13 @@ import SwiftUI
 
 struct AddingDataView: View {
     @Binding var navPath: NavigationPath
+    @StateObject var viewModel: AddingDataViewModel
     
     var body: some View {
         VStack {
             TitleBackButtonView(navPath: $navPath)
             
-            BodyParametersView()
+            BodyParametersView(viewModel: viewModel)
             Spacer()
         }
         .frame(maxWidth: .infinity)

@@ -37,6 +37,19 @@ struct AddDataButtonStyle: ButtonStyle {
     }
 }
 
+struct SafeDataButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .bigStyleText(weight: .regular, color: .white)
+            .frame(maxWidth: .infinity)
+            .padding(8)
+            .background(Color.blueColor)
+            .cornerRadius(14)
+            .scaleEffect(configuration.isPressed ? 0.95 : 1.0)
+            .animation(.spring(), value: configuration.isPressed)
+    }
+}
+
 extension View {
     func settingButtonStyle() -> some View {
         self.buttonStyle(SettingsButtonStyle())
@@ -44,5 +57,9 @@ extension View {
     
     func addDataButtonStyle() -> some View {
         self.buttonStyle(AddDataButtonStyle())
+    }
+    
+    func safeDataButtonStyle() -> some View {
+        self.buttonStyle(SafeDataButton())
     }
 }

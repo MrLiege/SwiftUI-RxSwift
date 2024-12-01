@@ -19,4 +19,8 @@ extension Color {
     static func yellowColor() -> Color {
         return Color(red: 255/255, green: 193/255, blue: 34/255, opacity: 0.7)
     }
+    
+    static var blueColor: Color {
+        return Color(red: 0/255, green: 136/255, blue: 255/255)
+    }
 }

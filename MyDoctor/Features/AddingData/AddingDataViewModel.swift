@@ -11,29 +11,28 @@ import RxCocoa
 import CoreData
 
 final class AddingDataViewModel: ObservableObject {
-    let input: Input
-    let output: Output
+    @Published var listItems: [MeasurementEntity] = []
     
-    private var disposeBag = DisposeBag()
+    private var dataController = DataController.shared
     
     init() {
-        self.input = Input()
-        self.output = Output()
-        
-        bind()
+        fetchItems()
     }
     
-}
-
-extension AddingDataViewModel {
-    func bind() {
-    }
-}
-
-extension AddingDataViewModel {
-    struct Input {
+    func fetchItems() {
+        listItems = dataController.fetchItems()
     }
     
-    struct Output {
+    func addItem(diastolicPressure: Int16, systolicPressure: Int16, pulse: Int16, measurementDate: Date, measurementTime: Date, note: String) {
+        dataController.saveNewMeasurement(diastolicPressure: diastolicPressure, systolicPressure: systolicPressure, pulse: pulse, measurementDate: measurementDate, measurementTime: measurementTime, note: note)
+        fetchItems()
+        printAllItems()
+    }
+    
+    func printAllItems() {
+        let items = dataController.fetchItems()
+        for item in items {
+            print("ID: \(item.id), Систолическое: \(item.systolicPressure), Диастолическое: \(item.diastolicPressure), Пульс: \(item.pulse), Дата: \(item.measurementDate), Время: \(item.measurementTime), Заметка: \(item.note ?? "")")
+        }
     }
 }

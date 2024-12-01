@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C45D8B32CFCE0D1001C9821 /* AddingDatePickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C45D8B22CFCE0D1001C9821 /* AddingDatePickerModifier.swift */; };
 		0CA5A4CC2CC6952A00A484DB /* MyDoctorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A4CB2CC6952A00A484DB /* MyDoctorApp.swift */; };
 		0CA5A4CE2CC6952A00A484DB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A4CD2CC6952A00A484DB /* MainView.swift */; };
 		0CA5A4D02CC6952B00A484DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CA5A4CF2CC6952B00A484DB /* Assets.xcassets */; };
@@ -28,7 +29,7 @@
 		0CA5A53F2CC7E92400A484DB /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A53E2CC7E92400A484DB /* NoteView.swift */; };
 		0CA5A5422CC7F4C700A484DB /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A5412CC7F4C700A484DB /* PopUpView.swift */; };
 		0CA5A5442CC7F9DD00A484DB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A5432CC7F9DD00A484DB /* MainViewModel.swift */; };
-		0CA5A5562CC8E1B000A484DB /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A5552CC8E1B000A484DB /* CoreData.swift */; };
+		0CA5A5562CC8E1B000A484DB /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A5552CC8E1B000A484DB /* DataController.swift */; };
 		0CA5A5592CC8E63700A484DB /* MeasurementEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A5572CC8E63700A484DB /* MeasurementEntity+CoreDataClass.swift */; };
 		0CA5A55A2CC8E63700A484DB /* MeasurementEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A5582CC8E63700A484DB /* MeasurementEntity+CoreDataProperties.swift */; };
 		0CA5A55D2CC8F36500A484DB /* AddingDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA5A55C2CC8F36500A484DB /* AddingDataView.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C45D8B22CFCE0D1001C9821 /* AddingDatePickerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingDatePickerModifier.swift; sourceTree = "<group>"; };
 		0CA5A4C82CC6952A00A484DB /* MyDoctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDoctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA5A4CB2CC6952A00A484DB /* MyDoctorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDoctorApp.swift; sourceTree = "<group>"; };
 		0CA5A4CD2CC6952A00A484DB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -74,7 +76,7 @@
 		0CA5A53E2CC7E92400A484DB /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		0CA5A5412CC7F4C700A484DB /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		0CA5A5432CC7F9DD00A484DB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		0CA5A5552CC8E1B000A484DB /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		0CA5A5552CC8E1B000A484DB /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		0CA5A5572CC8E63700A484DB /* MeasurementEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeasurementEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0CA5A5582CC8E63700A484DB /* MeasurementEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeasurementEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0CA5A55C2CC8F36500A484DB /* AddingDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingDataView.swift; sourceTree = "<group>"; };
@@ -353,7 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				0CA5A4D62CC6952B00A484DB /* MyDoctor.xcdatamodeld */,
-				0CA5A5552CC8E1B000A484DB /* CoreData.swift */,
+				0CA5A5552CC8E1B000A484DB /* DataController.swift */,
 			);
 			path = Storages;
 			sourceTree = "<group>";
@@ -421,6 +423,7 @@
 		0CA5A6142CD253F200A484DB /* DatePickerModifier */ = {
 			isa = PBXGroup;
 			children = (
+				0C45D8B22CFCE0D1001C9821 /* AddingDatePickerModifier.swift */,
 			);
 			path = DatePickerModifier;
 			sourceTree = "<group>";
@@ -511,9 +514,10 @@
 				0CA5A5592CC8E63700A484DB /* MeasurementEntity+CoreDataClass.swift in Sources */,
 				0CA5A55A2CC8E63700A484DB /* MeasurementEntity+CoreDataProperties.swift in Sources */,
 				0CA5A4CE2CC6952A00A484DB /* MainView.swift in Sources */,
+				0C45D8B32CFCE0D1001C9821 /* AddingDatePickerModifier.swift in Sources */,
 				0CA5A5232CC6B18000A484DB /* DataButtonView.swift in Sources */,
 				0CA5A5702CC97B2400A484DB /* TitleBackButtonView.swift in Sources */,
-				0CA5A5562CC8E1B000A484DB /* CoreData.swift in Sources */,
+				0CA5A5562CC8E1B000A484DB /* DataController.swift in Sources */,
 				0CA5A5172CC6A96200A484DB /* NavigationTitleModifier.swift in Sources */,
 				0CA5A52B2CC6E4DA00A484DB /* CustomButtonStyle.swift in Sources */,
 				0CA5A51F2CC6AC5800A484DB /* TextStylesModifier.swift in Sources */,
